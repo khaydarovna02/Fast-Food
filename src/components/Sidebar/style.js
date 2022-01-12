@@ -5,17 +5,23 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: fit-content;
+  height: 150vh;
+  min-width: 280px;
   padding: 28px 24px 40px 0;
-  border: 1px solid red;
+  background: #ffffff;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  position: sticky;
+  top: 0;
 `;
 
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  height: fit-content;
-  margin-bottom: 64px;
-  padding: 0 24px;
+  margin: 0 0 64px 20px;
 `;
 
 LogoWrapper.Img = styled.img`
@@ -25,18 +31,22 @@ LogoWrapper.Img = styled.img`
   margin-right: 20px;
 `;
 
-LogoWrapper.Title = styled.div`
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+Text.Title = styled.div`
   font-family: SFProDisplay bold;
   font-size: 16px;
   line-height: 19px;
   color: #2d3a45;
 `;
 
-LogoWrapper.Desc = styled.div`
+Text.Desc = styled.div`
   font-family: SFProDisplay;
   font-size: 12px;
   line-height: 14px;
-  text-align: center;
   color: #2d3a45;
   mix-blend-mode: normal;
   opacity: 0.5;
@@ -44,16 +54,21 @@ LogoWrapper.Desc = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ chiqish }) => (chiqish ? "row" : "column")};
+  align-items: ${({ chiqish }) => chiqish && "center"};
+  margin-top: ${({ chiqish }) => chiqish && "auto"};
+  cursor: pointer;
 `;
 
 export const Item = styled.div`
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   height: 48px;
-  padding: 6px 40px;
 `;
 
 export const Link = styled(NavLink)`
+  width: 100%;
   display: flex;
   align-items: center;
   font-family: SFProDisplay;
@@ -61,6 +76,8 @@ export const Link = styled(NavLink)`
   line-height: 18px;
   color: #2d3a45;
   text-decoration: none;
+  border-radius: 0px 6px 6px 0px;
+  transition: all 0.2s;
 
   .icon {
     width: 36px;
@@ -68,11 +85,29 @@ export const Link = styled(NavLink)`
     padding: 10px;
     background: #f6f6f6;
     border-radius: 6px;
-    margin-right: 9px;
+    margin: 0 9px 0 40px;
   }
 `;
 
-export const IconWrapper = styled.img`
-  width: 16px;
-  height: 16px;
+export const IconWrapper = styled.div`
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  margin-left: 40px;
 `;
+
+IconWrapper.Title = styled.div`
+  font-family: SFProDisplay;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2d3a45;
+  margin-left: 9px;
+`;
+
+export const activeStyle = {
+  color: "white",
+  background: "#FCB600",
+  padding: "6px 0",
+};
