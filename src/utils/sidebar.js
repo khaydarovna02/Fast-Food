@@ -1,4 +1,5 @@
 import Generic from "../page/Generic";
+import Buyurtmalar from "../page/Buyurtmalar";
 
 import { ReactComponent as buyurtmalar } from "../assets/icons/buyurtmalar.svg";
 import { ReactComponent as maxsulotlar } from "../assets/icons/maxsulotlar.svg";
@@ -12,11 +13,11 @@ import { ReactComponent as katalog } from "../assets/icons/settings.svg";
 export const sidebar = [
   {
     id: 1,
-    path: "/buyurtmalar",
+    path: "/",
     title: "Buyurtmalar",
-    Component: Generic,
+    Component: Buyurtmalar,
     Icon: buyurtmalar,
-    hidden: false,
+    hidden: true,
   },
   {
     id: 2,

@@ -9,12 +9,11 @@ export const Root = () => {
   return (
     <Container>
       <Router>
-        <Sidebar />
-        {/* <Routes> */}
-        {/* {sidebar.map(({ id, path }) => ( */}
-        {/* // <Route exact key={id} path={path} component={Sidebar} /> */}
-        {/* // ))} */}
-        {/* </Routes> */}
+        <Switch>
+          {sidebar.map(({ id, path }) => (
+            <Route key={id} path={path} component={Sidebar} />
+          ))}
+        </Switch>
         <Switch>
           {sidebar.map(({ Component, id, path }) => (
             <Route exact key={id} path={path} component={Component} />
