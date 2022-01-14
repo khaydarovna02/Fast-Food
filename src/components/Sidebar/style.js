@@ -4,10 +4,11 @@ import { NavLink } from "react-router-dom";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 250px;
+  max-width: 300px;
+  min-width: 250px;
   height: 150vh;
-  min-width: 280px;
-  padding: 28px 24px 40px 0;
+  padding: 28px 20px 40px 0;
   background: #ffffff;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -21,14 +22,14 @@ export const Container = styled.div`
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 0 64px 20px;
+  margin: 0 0 64px 18px;
 `;
 
 LogoWrapper.Img = styled.img`
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 18px;
 `;
 
 export const Text = styled.div`
@@ -85,7 +86,7 @@ export const Link = styled(NavLink)`
     padding: 10px;
     background: #f6f6f6;
     border-radius: 6px;
-    margin: 0 9px 0 40px;
+    margin: 0 9px 0 35px;
   }
 `;
 
@@ -95,7 +96,7 @@ export const IconWrapper = styled.div`
   padding: 10px;
   background: #f6f6f6;
   border-radius: 6px;
-  margin-left: 40px;
+  margin-left: 35px;
 `;
 
 IconWrapper.Title = styled.div`

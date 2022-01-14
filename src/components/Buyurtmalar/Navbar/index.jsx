@@ -1,16 +1,41 @@
 import React, { useState } from "react";
-import { Container, Plus, Tab, Title, Toggle, Wrapper } from "./style";
+import {
+  Container,
+  IconsWrapper,
+  MenuH,
+  MenuV,
+  Plus,
+  Tab,
+  Title,
+  Toggle,
+  ToggleClone,
+  Wrapper,
+} from "./style";
 
 export const Navbar = () => {
   const [isActive, setIsActive] = useState("Yangi");
-  const [isTabActive, setIsTacActive] = useState(true);
+  const [isTabActive, setIsTabActive] = useState(true);
   return (
     <Container>
-      <Wrapper align>
+      <Wrapper align order="first">
         <Plus />
         <Title>Yangi buyurtma qo'shish</Title>
+        <ToggleClone>
+          <IconsWrapper
+            active={isTabActive}
+            onClick={() => setIsTabActive(true)}
+          >
+            <MenuH active={isTabActive} />
+          </IconsWrapper>
+          <IconsWrapper
+            active={!isTabActive}
+            onClick={() => setIsTabActive(false)}
+          >
+            <MenuV active={!isTabActive} />
+          </IconsWrapper>
+        </ToggleClone>
       </Wrapper>
-      <Wrapper>
+      <Wrapper order="second">
         <Tab>
           <Tab.Item
             onClick={() => setIsActive("Yangi")}
@@ -38,8 +63,21 @@ export const Navbar = () => {
           </Tab.Item>
         </Tab>
       </Wrapper>
-      <Wrapper align>
-        <Toggle></Toggle>
+      <Wrapper align order="third">
+        <Toggle>
+          <IconsWrapper
+            active={isTabActive}
+            onClick={() => setIsTabActive(true)}
+          >
+            <MenuH active={isTabActive} />
+          </IconsWrapper>
+          <IconsWrapper
+            active={!isTabActive}
+            onClick={() => setIsTabActive(false)}
+          >
+            <MenuV active={!isTabActive} />
+          </IconsWrapper>
+        </Toggle>
       </Wrapper>
     </Container>
   );
