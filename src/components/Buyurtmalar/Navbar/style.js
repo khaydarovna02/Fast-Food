@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
   height: 80px;
   padding: 22px 35px;
   background: white;
-  flex: ${({ align }) => (align ? "1" : "2")};
+  flex: ${({ align }) => (align ? "1" : "3")};
   border-left: 2px solid #e5e5e5;
   @media (max-width: 1360px) {
     order: ${getOrder};

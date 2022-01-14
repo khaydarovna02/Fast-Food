@@ -7,10 +7,28 @@ export const Body = () => {
     <Container>
       <Wrapper>
         <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </Wrapper>
-      <Wrapper></Wrapper>
-      <Wrapper></Wrapper>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </Wrapper>
+      <Wrapper>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </Wrapper>
+      <Wrapper>
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </Wrapper>
     </Container>
   );
 };

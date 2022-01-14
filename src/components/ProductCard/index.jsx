@@ -1,7 +1,7 @@
 import React from "react";
 import Done from "../Generic/Done";
 import Cancel from "../Generic/Cancel";
-import { Container, IconWrapper, Info, Payme, Wrapper } from "./style";
+import { Container, IconWrapper, Info, Wrapper } from "./style";
 
 export const ProductCard = () => {
   return (
@@ -36,10 +36,10 @@ export const ProductCard = () => {
             <Info.Clipboard />
             <Info.Text>35,400 UZS</Info.Text>
           </Info>
-          <Payme>
-            <Payme.Icon />
+          <Info.Payme>
+            <Info.PaymeIcon />
             <Info.Text>Payme</Info.Text>
-          </Payme>
+          </Info.Payme>
         </Info>
         <Info bottom>
           <Info.Truck />
@@ -52,17 +52,25 @@ export const ProductCard = () => {
       </Wrapper>
       <Wrapper last>
         <Info>
-          <Info.Total>Operator:</Info.Total>
-          <Cancel />
+          <div>
+            <Info.Total>Operator:</Info.Total>
+            <Info.Text bolder>Komilova M</Info.Text>
+          </div>
+          <Info.Icon>
+            <Cancel />
+          </Info.Icon>
         </Info>
-        <Info.Text bolder>Komilova M</Info.Text>
         <Info bottom>
-          <Info.Total>Filial:</Info.Total>
-          <Done />
+          <div>
+            <Info.Total>Filial:</Info.Total>
+            <Info.Text bolder>
+              Fast Food <br /> Maksim Gorkiy
+            </Info.Text>
+          </div>
+          <Info.Icon>
+            <Done />
+          </Info.Icon>
         </Info>
-        <Info.Text bolder>
-          Fast Food <br /> Maksim Gorkiy
-        </Info.Text>
       </Wrapper>
     </Container>
   );
