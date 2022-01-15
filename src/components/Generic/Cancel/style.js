@@ -21,4 +21,5 @@ export const CancelIcon = styled(cancel)`
   background: #ffffff;
   box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
   border-radius: 50%;
+  cursor: pointer;
 `;

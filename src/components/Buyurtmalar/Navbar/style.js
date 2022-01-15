@@ -18,6 +18,8 @@ const getOrder = ({ order }) => {
 
 export const Container = styled.div`
   display: flex;
+  position: sticky;
+  top: 0;
   @media (max-width: 1360px) {
     flex-direction: column;
   }

@@ -3,38 +3,40 @@ import Done from "../Generic/Done";
 import Cancel from "../Generic/Cancel";
 import { Container, IconWrapper, Info, Wrapper } from "./style";
 
-export const ProductCard = () => {
+export const ProductCard = ({ value }) => {
   return (
     <Container>
       <Wrapper>
         <Info>
-          <Info.OrderID>8534</Info.OrderID>
+          <Info.OrderID>{value.orderId}</Info.OrderID>
           <IconWrapper>
             <Info.Save />
           </IconWrapper>
         </Info>
         <Info border bottom>
           <Info.Clock />
-          <Info.Time>00:22</Info.Time>
+          <Info.Time>
+            {`${value.time.getHours()}:${value.time.getMinutes()}`}
+          </Info.Time>
         </Info>
       </Wrapper>
       <Wrapper>
         <Info>
           <Info.User />
           <Info.UserName>
-            Deveeprasad <br /> Acharya
+            {value.user.name} <br /> {value.user.surname}
           </Info.UserName>
         </Info>
         <Info bottom>
           <Info.Phone />
-          <Info.Text>(+99 893) 461-41-88</Info.Text>
+          <Info.Text>{value.user.phone}</Info.Text>
         </Info>
       </Wrapper>
       <Wrapper>
         <Info>
           <Info>
             <Info.Clipboard />
-            <Info.Text>35,400 UZS</Info.Text>
+            <Info.Text>{value.summ.buyurtmaSumm} UZS</Info.Text>
           </Info>
           <Info.Payme>
             <Info.PaymeIcon />
@@ -43,18 +45,18 @@ export const ProductCard = () => {
         </Info>
         <Info bottom>
           <Info.Truck />
-          <Info.Text>5,000 UZS</Info.Text>
+          <Info.Text>{value.summ.truckSumm} UZS</Info.Text>
         </Info>
         <Info bottom>
           <Info.Total>Umumiy summa</Info.Total>
         </Info>
-        <Info.Summ>40,400 UZS</Info.Summ>
+        <Info.Summ>{value.summ.totalSumm} UZS</Info.Summ>
       </Wrapper>
       <Wrapper last>
         <Info>
           <div>
             <Info.Total>Operator:</Info.Total>
-            <Info.Text bolder>Komilova M</Info.Text>
+            <Info.Text bolder>{value.operator.name}</Info.Text>
           </div>
           <Info.Icon>
             <Cancel />
@@ -64,7 +66,7 @@ export const ProductCard = () => {
           <div>
             <Info.Total>Filial:</Info.Total>
             <Info.Text bolder>
-              Fast Food <br /> Maksim Gorkiy
+              {value.filial.title} <br /> {value.filial.location}
             </Info.Text>
           </div>
           <Info.Icon>
