@@ -68,6 +68,8 @@ export const Tab = styled.div`
   padding: 6px;
   background: #edeff3;
   border-radius: 24px;
+  opacity: ${({ active }) => !active && 0.4};
+  cursor: ${({ active }) => (active ? "pointer" : "not-allowed")};
 `;
 
 Tab.Item = styled.div`
@@ -81,7 +83,6 @@ Tab.Item = styled.div`
   line-height: 16px;
   color: #9c9fa2;
   mix-blend-mode: normal;
-  cursor: pointer;
   background: ${({ active }) => active && "white"};
   box-shadow: ${({ active }) =>
     active && "0px 2px 2px rgba(174, 176, 181, 0.314986)"};

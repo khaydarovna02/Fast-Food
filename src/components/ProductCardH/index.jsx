@@ -3,7 +3,7 @@ import Done from "../Generic/Done";
 import Cancel from "../Generic/Cancel";
 import { Container, IconWrapper, Info, Wrapper } from "./style";
 
-export const ProductCard = ({ value }) => {
+export const ProductCardH = ({ value }) => {
   return (
     <Container>
       <Wrapper>
@@ -78,4 +78,4 @@ export const ProductCard = ({ value }) => {
   );
 };
 
-export default ProductCard;
+export default ProductCardH;
