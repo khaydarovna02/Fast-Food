@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.div`
   display: flex;
+  margin-bottom: 4px;
 `;
 
 Header.Title = styled.div`
@@ -53,12 +54,13 @@ export const Total = styled.div`
   width: 234px;
   min-width: 234px;
   display: flex;
+  align-items: center;
   height: 50px;
   background: #ffffff;
   box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
   border-radius: 6px;
   padding: 16px;
-  margin-top: 8px;
+  margin: 4px 0;
 `;
 
 Total.Icon = styled.div`

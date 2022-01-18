@@ -51,6 +51,7 @@ export const Navbar = (props) => {
           >
             Yangi
           </Tab.Item>
+
           <Tab.Item
             onClick={() => {
               isTabActive && setIsActive("Qabul qilingan");
@@ -77,6 +78,7 @@ export const Navbar = (props) => {
           </Tab.Item>
         </Tab>
       </Wrapper>
+
       <Wrapper align order="third">
         <Toggle>
           <IconsWrapper

@@ -1,9 +1,10 @@
 import React from "react";
-import { card } from "../../../mock/card";
+import { BuyurtmaContext } from "../../../context/buyurtmalar";
 import ProductCardH from "../../ProductCardH";
 import { Container, Wrapper } from "./style";
 
 export const MenuH = () => {
+  const [card] = BuyurtmaContext();
   return (
     <Container>
       <Wrapper>

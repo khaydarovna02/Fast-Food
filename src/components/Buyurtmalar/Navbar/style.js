@@ -20,6 +20,7 @@ export const Container = styled.div`
   display: flex;
   position: sticky;
   top: 0;
+  z-index: 999;
   @media (max-width: 1360px) {
     flex-direction: column;
   }

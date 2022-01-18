@@ -11,7 +11,8 @@ export const Container = styled.div`
   border-radius: 6px;
   width: 234px;
   min-width: 234px;
-  margin: 6px 0;
+  max-width: fit-content;
+  margin: 4px 0;
   padding: 0 18px;
 
   :hover {

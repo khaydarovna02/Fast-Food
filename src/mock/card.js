@@ -2,6 +2,7 @@ export const card = {
   yangi: [
     {
       id: 11,
+      category: "yangi",
       orderId: 8549,
       time: new Date(),
       user: {
@@ -24,6 +25,7 @@ export const card = {
     },
     {
       id: 12,
+      category: "yangi",
       orderId: 8534,
       time: new Date(),
       user: {
@@ -48,6 +50,7 @@ export const card = {
   qabul: [
     {
       id: 21,
+      category: "qabul",
       orderId: 8549,
       time: new Date(),
       user: {
@@ -70,6 +73,7 @@ export const card = {
     },
     {
       id: 22,
+      category: "qabul",
       orderId: 8534,
       time: new Date(),
       user: {
@@ -94,6 +98,7 @@ export const card = {
   jonatilgan: [
     {
       id: 31,
+      category: "jonatilgan",
       orderId: 8549,
       time: new Date(),
       user: {
@@ -116,6 +121,7 @@ export const card = {
     },
     {
       id: 32,
+      category: "jonatilgan",
       orderId: 8534,
       time: new Date(),
       user: {
@@ -140,6 +146,7 @@ export const card = {
   yopilgan: [
     {
       id: 41,
+      category: "yopilgan",
       orderId: 8549,
       time: new Date(),
       user: {
@@ -162,6 +169,7 @@ export const card = {
     },
     {
       id: 42,
+      category: "yopilgan",
       orderId: 8534,
       time: new Date(),
       user: {
