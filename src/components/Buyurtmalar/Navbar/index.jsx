@@ -22,22 +22,22 @@ export const Navbar = (props) => {
         <Title>Yangi buyurtma qo'shish</Title>
         <ToggleClone>
           <IconsWrapper
-            active={isTabActive}
+            active="true"
             onClick={() => {
               setIsTabActive(true);
               props.onClick(true);
             }}
           >
-            <MenuH active={isTabActive} />
+            <MenuH active="true" />
           </IconsWrapper>
           <IconsWrapper
-            active={!isTabActive}
+            active="false"
             onClick={() => {
               setIsTabActive(false);
               props.onClick(false);
             }}
           >
-            <MenuV active={!isTabActive} />
+            <MenuV active="false" />
           </IconsWrapper>
         </ToggleClone>
       </Wrapper>
@@ -82,22 +82,22 @@ export const Navbar = (props) => {
       <Wrapper align order="third">
         <Toggle>
           <IconsWrapper
-            active={isTabActive}
+            active="true"
             onClick={() => {
               setIsTabActive(true);
               props.onClick(true);
             }}
           >
-            <MenuH active={isTabActive} />
+            <MenuH active="true" />
           </IconsWrapper>
           <IconsWrapper
-            active={!isTabActive}
+            active="false"
             onClick={() => {
               setIsTabActive(false);
               props.onClick(false);
             }}
           >
-            <MenuV active={!isTabActive} />
+            <MenuV active="false" />
           </IconsWrapper>
         </Toggle>
       </Wrapper>
