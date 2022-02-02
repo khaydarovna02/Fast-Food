@@ -9,6 +9,7 @@ import { ReactComponent as mijozlar } from "../assets/icons/mijozlar.svg";
 import { ReactComponent as xisobot } from "../assets/icons/xisobot.svg";
 import { ReactComponent as hodimlar } from "../assets/icons/settings.svg";
 import { ReactComponent as katalog } from "../assets/icons/settings.svg";
+import Maxsulotlar from "../components/Maxsulotlar";
 
 export const sidebar = [
   {
@@ -23,7 +24,7 @@ export const sidebar = [
     id: 2,
     path: "/maxsulotlar",
     title: "Maxsulotlar",
-    Component: Generic,
+    Component: Maxsulotlar,
     Icon: maxsulotlar,
     hidden: false,
   },

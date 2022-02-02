@@ -10,7 +10,7 @@ export const MenuV = () => {
       <Wrapper>
         <Header>
           <Header.Title>Yangi</Header.Title>
-          <Header.Counter>4</Header.Counter>
+          <Header.Counter>{card.yangi.length}</Header.Counter>
         </Header>
         <Total>
           <Total.Icon green />
@@ -23,7 +23,7 @@ export const MenuV = () => {
       <Wrapper>
         <Header>
           <Header.Title>Qabul qilingan</Header.Title>
-          <Header.Counter>2</Header.Counter>
+          <Header.Counter>{card.qabul.length}</Header.Counter>
         </Header>
         <Total>
           <Total.Icon blue />
@@ -36,7 +36,7 @@ export const MenuV = () => {
       <Wrapper>
         <Header>
           <Header.Title>Jo'natilgan</Header.Title>
-          <Header.Counter>8</Header.Counter>
+          <Header.Counter>{card.jonatilgan.length}</Header.Counter>
         </Header>
         <Total>
           <Total.Icon yellow />
@@ -49,7 +49,7 @@ export const MenuV = () => {
       <Wrapper>
         <Header>
           <Header.Title>Yopilgan</Header.Title>
-          <Header.Counter>12</Header.Counter>
+          <Header.Counter>{card.yopilgan.length}</Header.Counter>
         </Header>
         <Total>
           <Total.Icon purple />
