@@ -1,5 +1,8 @@
 import React from "react";
-import { Container, TitleWrap, Wrapper } from "./style";
+import { Container, Display, Image, Text, TitleWrap, Wrapper } from "./style";
+import minilavash from "../../../assets/imgs/lavashmini.png";
+import Delete from "../../Generic/Delete";
+import Edit from "../../Generic/Edit";
 
 export const Body = () => {
   return (
@@ -11,7 +14,21 @@ export const Body = () => {
         <TitleWrap.Item>Qo'shimcha</TitleWrap.Item>
         <TitleWrap.Item>Action</TitleWrap.Item>
       </TitleWrap>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        <Display>
+          <Image>
+            <img src={minilavash} alt="lavashmini" />
+          </Image>
+          <Text title>Lavash mini</Text>
+        </Display>
+        <Text>Lavash</Text>
+        <Text>18,000 UZS</Text>
+        <Text>Kichkina lavash, bla bla</Text>
+        <Display>
+          <Edit />
+          <Delete />
+        </Display>
+      </Wrapper>
     </Container>
   );
 };
