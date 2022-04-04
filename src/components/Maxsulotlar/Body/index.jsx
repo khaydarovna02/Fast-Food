@@ -15,7 +15,7 @@ export const Body = () => {
         <TitleWrap.Item>Action</TitleWrap.Item>
       </TitleWrap>
       {card.map((value) => (
-        <Wrapper>
+        <Wrapper key={value.id}>
           <Display>
             <Image>
               <img src={value.img} alt="lavash" />
