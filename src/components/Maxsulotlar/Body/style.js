@@ -28,19 +28,23 @@ TitleWrap.Item = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
-  margin: 4px 36px;
+  margin: 4px 38px;
   background: #ffffff;
   box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
   border-radius: 6px;
+
+  :hover {
+    box-shadow: 0px 20px 25px rgba(176, 177, 181, 0.432802);
+  }
 `;
 
 export const Display = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 6px;
+  padding: 0 6px;
 `;
 
 export const Image = styled.div`
@@ -48,9 +52,6 @@ export const Image = styled.div`
 `;
 
 export const Text = styled.div`
-  margin: ${({ title }) => !title && "0 6px"};
-  display: flex;
-  align-items: center;
   font-family: SFProDisplay;
   font-size: 13px;
   line-height: 15px;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Display, Image, Text, TitleWrap, Wrapper } from "./style";
-import minilavash from "../../../assets/imgs/lavashmini.png";
 import Delete from "../../Generic/Delete";
 import Edit from "../../Generic/Edit";
+import { card } from "../../../mock/drag and drop";
 
 export const Body = () => {
   return (
@@ -14,21 +14,25 @@ export const Body = () => {
         <TitleWrap.Item>Qo'shimcha</TitleWrap.Item>
         <TitleWrap.Item>Action</TitleWrap.Item>
       </TitleWrap>
-      <Wrapper>
-        <Display>
-          <Image>
-            <img src={minilavash} alt="lavashmini" />
-          </Image>
-          <Text title>Lavash mini</Text>
-        </Display>
-        <Text>Lavash</Text>
-        <Text>18,000 UZS</Text>
-        <Text>Kichkina lavash, bla bla</Text>
-        <Display>
-          <Edit />
-          <Delete />
-        </Display>
-      </Wrapper>
+      {card.map((value) => (
+        <Wrapper>
+          <Display>
+            <Image>
+              <img src={value.img} alt="lavash" />
+            </Image>
+            <Text>{value.name}</Text>
+          </Display>
+          <Text>{value.category}</Text>
+          <Text title>{value.cost} UZS</Text>
+          <Text>
+            {value.qoshimcha.type}, {value.qoshimcha.other}
+          </Text>
+          <Display>
+            <Edit />
+            <Delete />
+          </Display>
+        </Wrapper>
+      ))}
     </Container>
   );
 };
