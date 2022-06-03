@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { Container } from "./style";
 
 export const Buyurtma = ({ location }) => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState;
   return (
     <Container>
       <Navbar onClick={(state) => setActive(state)} />
